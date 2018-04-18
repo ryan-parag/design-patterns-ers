@@ -1,9 +1,11 @@
-extends ../layouts/main
+extends ../layouts/_main
 
 block vars
  - var spacer = "";
  - var page = "";
 
 block content
-
- h1 hello world
+ include ../partials/_icons
+ .main-content
+  include ../partials/_sidebar
+  .content
