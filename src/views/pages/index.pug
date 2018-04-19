@@ -7,9 +7,20 @@ block vars
 block head_end
   link(rel="stylesheet" href="./css/system/styles.min.css")
   link(rel="stylesheet" href="./css/docs/docs.min.css")
+  // Replace and load from local
+  link(href="https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css" rel="stylsheet")
 
 block content
  include ../partials/_icons
  .main-content
   include ../partials/_sidebar
   .content
+    section.jumbotron.jumbotron--title
+      h1.jumbotron__title.text-primary ERS Design Patterns
+      p.jumbotron__subtitle.text-muted Conjunction of design patterns, components, and resources used across ERS.
+    .intro
+      .row
+        .col-md-12
+          h2 What are design patterns?
+          p The ERS interface design patterns are a collection of predefined elements, user interface components, and guidelines for their usage.
+          p The design patterns should be a core part of the development process and a tool that enables us to design and build features that reflect consistency and the highest standards in design, code and accessibility- with the end goal resulting in stellar, inclusive user experiences as well as achieving business goals faster.

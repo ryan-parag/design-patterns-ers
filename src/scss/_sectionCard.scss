@@ -11,6 +11,9 @@
     color: inherit;
     box-shadow: 0 15px 20px rgba(0,0,0,.08), 0 5px 8px rgba(0,0,0,.04);
     &:hover, &:focus {
+      text-decoration:none;
+      box-shadow: 0 25px 30px rgba(0,0,0,.04), 0 10px 15px rgba(0,0,0,.04);
+      transition: 250ms ease;
       svg {
         top:0;
         transition: 250ms ease;
@@ -28,6 +31,8 @@
       svg {
         position: relative;
         top: 8px;
+        width:75px;
+        height:75px;
         .shadow {
           opacity: 0;
         }

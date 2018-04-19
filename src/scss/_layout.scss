@@ -28,3 +28,9 @@
     }
   }
 }
+// Replace with local files
+@import url('https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css');
+
+html, body {
+  font-family: 'Inter UI';
+}
