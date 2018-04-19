@@ -1,0 +1,16 @@
+mixin jumbotron(title, subtitle, type)
+  section.jumbotron.jumbotron--title
+    if type === "Getting Started"
+      svg.jumbotron__icon.text-primary
+          use(xlink:href="#flag")
+      span.badge.badge-primary.jumbotron__badge Getting Started
+    if type === "Design"
+      svg.jumbotron__icon.text-success
+          use(xlink:href="#paint")
+      span.badge.badge-success.jumbotron__badge Design
+    if type === "Component"
+      svg.jumbotron__icon.text-danger
+          use(xlink:href="#stack")
+      span.badge.badge-danger.jumbotron__badge Component
+    h1.jumbotron__title= title
+    p.jumbotron__subtitle.text-muted= subtitle

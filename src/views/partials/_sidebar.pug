@@ -1,27 +1,100 @@
 aside.sidebar.show
- ul.sidebar__menu
-  li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Dashboard")
-   .sidebar__title
-    svg.sidebar__icon
-     use(xlink:href="#flag")
-    .sidebar__label Getting Started
-  li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Dashboard")
-   .sidebar__title
-    svg.sidebar__icon
-     use(xlink:href="#paint")
-    .sidebar__label Design
-  li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Dashboard")
-   .sidebar__title
-    svg.sidebar__icon
-     use(xlink:href="#stack")
-    .sidebar__label Components
-  li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Dashboard")
-   .sidebar__title
-    svg.sidebar__icon
-     use(xlink:href="#folder")
-    .sidebar__label Resources
-  li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Dashboard")
-   .sidebar__title
-    svg.sidebar__icon
-     use(xlink:href="#docs")
-    .sidebar__label Templates
+  .sidebar--fixed
+   .logo-container
+    a.logo#logo(href="#")
+     include _logo
+   ul.sidebar__menu
+    li.sidebar__item#gettingStarted(data-toggle="tooltip" data-placement="top" title="Getting Started")
+     .sidebar__title
+      svg.sidebar__icon
+       use(xlink:href="#flag")
+      .sidebar__label Getting Started
+     ul.sidebar__submenu
+      li.sidebar__subitem
+       a(href="#") Overview
+    li.sidebar__item#design(data-toggle="tooltip" data-placement="top" title="Design")
+     .sidebar__title
+      svg.sidebar__icon
+       use(xlink:href="#paint")
+      .sidebar__label Design
+     ul.sidebar__submenu
+      li.sidebar__subitem
+       a(href="#") Typography
+      li.sidebar__subitem
+       a(href="#") Colors
+    li.sidebar__item#components(data-toggle="tooltip" data-placement="top" title="Components")
+     .sidebar__title
+      svg.sidebar__icon
+       use(xlink:href="#stack")
+      .sidebar__label Components
+     ul.sidebar__submenu
+      li.sidebar__subitem
+       a(href="#") Alerts
+      li.sidebar__subitem
+       a(href="#") Badges
+      li.sidebar__subitem
+       a(href="#") Breadcrumbs
+      li.sidebar__subitem
+       a(href="#") Button Group
+      li.sidebar__subitem
+       a(href="#") Buttons
+      li.sidebar__subitem
+       a(href="#") Card
+      li.sidebar__subitem
+       a(href="#") Card Nav
+      li.sidebar__subitem
+       a(href="#") Close
+      li.sidebar__subitem
+       a(href="#") Containers
+      li.sidebar__subitem
+       a(href="#") Dropdown
+      li.sidebar__subitem
+       a(href="#") Empty State
+      li.sidebar__subitem
+       a(href="#") Forms
+      li.sidebar__subitem
+       a(href="#") Grid
+      li.sidebar__subitem
+       a(href="#") Header
+      li.sidebar__subitem
+       a(href="#") Images
+      li.sidebar__subitem
+       a(href="#") Info Card
+      li.sidebar__subitem
+       a(href="#") Input Group
+      li.sidebar__subitem
+       a(href="#") List Group
+      li.sidebar__subitem
+       a(href="#") Media
+      li.sidebar__subitem
+       a(href="#") Modal
+      li.sidebar__subitem
+       a(href="#") Nav
+      li.sidebar__subitem
+       a(href="#") Navbar
+      li.sidebar__subitem
+       a(href="#") Normalize
+      li.sidebar__subitem
+       a(href="#") Pagination
+      li.sidebar__subitem
+       a(href="#") Profile
+      li.sidebar__subitem
+       a(href="#") Progress
+      li.sidebar__subitem
+       a(href="#") Sidebar
+      li.sidebar__subitem
+       a(href="#") Tables
+      li.sidebar__subitem
+       a(href="#") Tooltips
+      li.sidebar__subitem
+       a(href="#") Transitions
+    li.sidebar__item#resources(data-toggle="tooltip" data-placement="top" title="Resources")
+     .sidebar__title
+      svg.sidebar__icon
+       use(xlink:href="#folder")
+      .sidebar__label Resources
+    li.sidebar__item#templates(data-toggle="tooltip" data-placement="top" title="Templates")
+     .sidebar__title
+      svg.sidebar__icon
+       use(xlink:href="#docs")
+      .sidebar__label Templates

@@ -1,0 +1,21 @@
+//---------------------------------------------------------------
+// DOCS.SCSS
+//---------------------------------------------------------------
+
+// There's probably alot of hacky stuff in the docs SCSS, but IDGAF because it's not actually part of the ERS design system - 'ya boy Ryan
+
+// Custom Variables, Functions, Mixins
+@import 'variables';
+@import 'mixins';
+
+// Custom Typography
+@import 'typography';
+@import 'code';
+
+// Custom Layout and Components
+@import 'layout';
+@import 'jumbotron';
+@import 'sectionCard';
+
+// Custom Pages
+@import 'page';

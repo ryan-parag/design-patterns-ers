@@ -1,0 +1,29 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var page = "Overview";
+ - var sectionId = "gettingStarted";
+ - var pageId = "overview"
+block head_end
+  link(rel="stylesheet" href="../css/system/styles.min.css")
+  link(rel="stylesheet" href="../css/docs/docs.min.css")
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Overview', 'The Living Design System for ERS', 'Getting Started')
+    .card-area.container
+      .row
+        .col-lg-6
+          +sectionCard("design", 'Design', 'Guidance on usage and application for basic design elements.', '#')
+        .col-lg-6
+          +sectionCard("components", 'Components', 'Set of components used across our ERS.', '#')
+        .col-lg-6
+          +sectionCard("resources", 'Resources', 'Guidance on usage and application for basic design elements.', '#')
+        .col-lg-6
+          +sectionCard("templates", 'Templates', 'Guidance on usage and application for basic design elements.', '#')

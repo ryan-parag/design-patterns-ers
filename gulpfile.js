@@ -12,14 +12,14 @@ var gulp = require('gulp'),
 var paths = {
   dist: './dist/',
   sass: './src/scss/',
-  css: './dist/css/',
+  css: './dist/css/docs/',
 		pug: './src/views/pages/**/*.pug'
 	};
 
 /* SCSS
 ==============================================*/
 gulp.task('sass', function () {
-	return gulp.src(paths.sass + 'styles.scss')
+	return gulp.src(paths.sass + 'docs.scss')
 		.pipe(sass())
 		.pipe(sourcemaps.init())
 		.pipe(minifyCSS())

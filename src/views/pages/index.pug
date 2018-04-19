@@ -3,6 +3,10 @@ extends ../layouts/_main
 block vars
  - var spacer = "";
  - var page = "";
+ - var section = "";
+block head_end
+  link(rel="stylesheet" href="./css/system/styles.min.css")
+  link(rel="stylesheet" href="./css/docs/docs.min.css")
 
 block content
  include ../partials/_icons

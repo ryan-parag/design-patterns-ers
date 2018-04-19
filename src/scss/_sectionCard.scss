@@ -1,0 +1,54 @@
+// Section Card
+
+.card-area {
+  width: 100%;
+  background: $base-lightgray4;
+  padding: 3rem 1.5rem;
+}
+
+.card {
+  &--section {
+    color: inherit;
+    box-shadow: 0 15px 20px rgba(0,0,0,.08), 0 5px 8px rgba(0,0,0,.04);
+    &:hover, &:focus {
+      svg {
+        top:0;
+        transition: 250ms ease;
+        .shadow {
+          opacity: .1;
+          transition: 350ms ease;
+        }
+      }
+    }
+    &__img {
+      display: inline-block;
+      width:75px;
+      height:75px;
+      margin-right: 1rem;
+      svg {
+        position: relative;
+        top: 8px;
+        .shadow {
+          opacity: 0;
+        }
+      }
+    }
+    &__content {
+      display:inline-block;
+    }
+    &__body {
+      display: flex;
+      align-items: center;
+    }
+    &__title {
+      font-size: 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    &__desc {
+      font-size: .9rem;
+      opacity: .6;
+    }
+  
+  }
+}
