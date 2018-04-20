@@ -1,0 +1,5 @@
+mixin subNav(selected, menus)
+	ul.sidebar__submenu
+		each menu in menus
+			li.sidebar__subitem
+				a(href= menu.address)= menu.title

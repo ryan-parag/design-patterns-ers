@@ -2,8 +2,30 @@ extends ../../layouts/_main
 
 block vars
  - var spacer = " | ";
- - var page = "Component";
+ - var page = "Overview";
+ - var section = "Components";
+ - var pageId = "overview"
+block head_end
+  link(rel="stylesheet" href="../css/system/styles.min.css")
+  link(rel="stylesheet" href="../css/docs/docs.min.css")
+  // Replace and load from local
+  link(href="https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css" rel="stylsheet")
 
 block content
-
- h1 hello world
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Overview', 'Consistent design patterns to rapidly prototype interface features for ERS', 'Getting Started')
+    .card-area.container
+      .row
+        .col-lg-6
+          +sectionCard("design", 'Design', 'Guidance on usage and application for basic design elements.', '#')
+        .col-lg-6
+          +sectionCard("components", 'Components', 'Set of components used across our ERS.', '#')
+        .col-lg-6
+          +sectionCard("resources", 'Resources', 'Guidance on usage and application for basic design elements.', '#')
+        .col-lg-6
+          +sectionCard("templates", 'Templates', 'Guidance on usage and application for basic design elements.', '#')

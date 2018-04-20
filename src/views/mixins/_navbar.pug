@@ -1,0 +1,26 @@
+include _subNav
+
+mixin navbar(selected, menus)
+  aside.sidebar.show
+    .sidebar--fixed
+      .logo-container
+        a.logo#logo(href="#")
+          include ../partials/_logo
+      ul.sidebar__menu
+        each menu in menus
+          if selected === menu.title
+            li.sidebar__item.active(data-toggle="tooltip" data-placement="top" title= menu.title)
+              .sidebar__title
+                svg.sidebar__icon
+                  use(xlink:href="#" + menu.icon)
+                .sidebar__label= menu.title
+              if menu.child.length > 0
+                +subNav(selected, menu.child)
+          else
+            li.sidebar__item(data-toggle="tooltip" data-placement="top" title= menu.title)
+              .sidebar__title
+                svg.sidebar__icon
+                  use(xlink:href="#" + menu.icon)
+                .sidebar__label= menu.title
+              if menu.child.length > 0
+                +subNav(selected, menu.child)

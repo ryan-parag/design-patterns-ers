@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 	sourcemaps  = require('gulp-sourcemaps'),
 	rename  = require('gulp-rename'),
  pug = require('gulp-pug'),
-	browserSync = require('browser-sync').create();
+	browserSync = require('browser-sync').create(),
+ pugLinter = require('gulp-pug-linter');
 
 var paths = {
   dist: './dist/',
@@ -37,9 +38,17 @@ gulp.task('sass', function () {
 ==============================================*/
 gulp.task('pug', function () {
   return gulp.src(paths.pug)
-  .pipe(pug({}))
+  .pipe(pug({
+  }))
 .pipe(gulp.dest(paths.dist));
 });
+
+gulp.task('lint', function () {
+  return gulp
+    .src(paths.pug)
+    .pipe(pugLinter())
+    .pipe(pugLinter.reporter('fail'))
+})
 
 /* Watch
 ==============================================*/
@@ -62,7 +71,7 @@ gulp.task('browserSync', function() {
 
 /* Build
 ==============================================*/
-gulp.task('build', ['sass', 'pug']);
+gulp.task('build', ['sass', 'pug', 'lint']);
 
 /* Compile
 ==============================================*/
