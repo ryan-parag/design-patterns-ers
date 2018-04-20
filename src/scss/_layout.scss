@@ -14,6 +14,11 @@
       width: 300px;
       position:relative;
     }
+    &__subitem.active {
+     color: #137cbd;
+      border-color: #137cbd;
+      transition: 150ms ease;
+    }
     &--fixed {
       overflow-y: scroll;
       overflow-x: hidden;

@@ -1,6 +1,6 @@
 include _subNav
 
-mixin navbar(selected, menus)
+mixin navbar(selected, subSelected, menus)
   aside.sidebar.show
     .sidebar--fixed
       .logo-container
@@ -23,4 +23,4 @@ mixin navbar(selected, menus)
                   use(xlink:href="#" + menu.icon)
                 .sidebar__label= menu.title
               if menu.child.length > 0
-                +subNav(selected, menu.child)
+                +subNav(subSelected, menu.child)

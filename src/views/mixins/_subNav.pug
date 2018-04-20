@@ -1,5 +1,9 @@
 mixin subNav(selected, menus)
-	ul.sidebar__submenu
-		each menu in menus
-			li.sidebar__subitem
-				a(href= menu.address)= menu.title
+  ul.sidebar__submenu
+    each menu in menus
+      if subSelected === menu.title
+        li.sidebar__subitem.active
+          a(href= menu.address)= menu.title
+      else
+        li.sidebar__subitem
+          a(href= menu.address)= menu.title
