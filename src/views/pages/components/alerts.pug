@@ -1,0 +1,36 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var page = "Overview";
+ - var section = "Components";
+ - var page = "Alerts";
+block head_end
+  link(rel="stylesheet" href="../css/system/styles.min.css")
+  link(rel="stylesheet" href="../css/docs/docs.min.css")
+  // Replace and load from local
+  link(href="https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css" rel="stylsheet")
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Alerts', 'Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.', 'Component')
+    .row
+      .col-md-12
+        .example-component
+          .alert.alert-success(role="alert")
+            strong Well Done! 
+            | You successfully read this important alert message.
+          .alert.alert-danger(role="alert")
+            strong Oh snap! 
+            | Change a few things up and try submitting again.
+          .alert.alert-warning(role="alert")
+            strong Warning! 
+            | Better check yourself, you're not looking too good.
+          .alert.alert-info(role="alert")
+            strong Heads up! 
+            | This alert needs your attention, but it's not super important.
