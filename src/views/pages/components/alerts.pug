@@ -2,14 +2,9 @@ extends ../../layouts/_main
 
 block vars
  - var spacer = " | ";
- - var page = "Overview";
  - var section = "Components";
  - var page = "Alerts";
 block head_end
-  link(rel="stylesheet" href="../css/system/styles.min.css")
-  link(rel="stylesheet" href="../css/docs/docs.min.css")
-  // Replace and load from local
-  link(href="https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css" rel="stylsheet")
 
 block content
  include ../../partials/_icons
@@ -21,6 +16,10 @@ block content
     +jumbotron('Alerts', 'Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.', 'Component')
     .row
       .col-md-12
+        .intro
+            p Use alerts to convey information, provide tips, communicate success, or even flag and notify the user of errors. Wrap your alert in an element with the class 
+              code .alert
+              | &nbsp;to apply the default alert appearance. Any HTML can live inside an alert, though content is typically limited to text and simple actions.
         .example-component
           .alert.alert-success(role="alert")
             strong Well Done! 
@@ -34,3 +33,34 @@ block content
           .alert.alert-info(role="alert")
             strong Heads up! 
             | This alert needs your attention, but it's not super important.
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+            |   &lt;strong&gt;Well Done! &lt;/strong&gt;You successfully read this important alert message.
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
+            |   &lt;strong&gt;Oh snap! &lt;/strong&gt;Change a few things up and try submitting again.
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+            |   &lt;strong&gt;Warning! &lt;/strong&gt;Better check yourself, you're not looking too good.
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
+            |   &lt;strong&gt;Heads up! &lt;/strong&gt;This alert needs your attention, but it's not super important.
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+            p Alerts can also contain additional HTML elements like headings and paragraphs.
+        .example-component
+          .alert.alert-success(role="alert")
+            h4.alert-heading Well done!
+            p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+            p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+            |    &lt;h4 class=&quot;alert-heading&quot;&gt;Well done!&lt;/h4&gt;
+            |    &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+            |    &lt;p class=&quot;mb-0&quot;&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+            |  &lt;/div&gt;

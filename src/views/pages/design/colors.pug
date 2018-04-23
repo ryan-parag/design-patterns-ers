@@ -1,0 +1,135 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Design";
+ - var page = "Colors";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  include ../../mixins/_swatch
+  .content
+    +jumbotron('Colors', 'Breadcrumbs are used for showing where the user is inside the application.', 'Design')
+    .row
+      .col-md-12
+        .intro
+            p A neutral palette along with a full color palette offer a wide array of color options for the interface.
+              code $elem-blue3
+              | &nbsp;is used across the design patterns as the primary color. You can see this carry across forms, buttons, and other components.
+        .example-component
+          .row
+            .col-md-12
+              h3 Base UI Colors
+          .row
+            .col
+              +swatch("base-black")
+            .col
+              +swatch("base-white")
+          .row
+            .col
+              +swatch("base-darkgray1")
+            .col
+              +swatch("base-darkgray2")
+            .col
+              +swatch("base-darkgray3")
+            .col
+              +swatch("base-darkgray4")
+            .col
+              +swatch("base-darkgray5")
+          .row
+            .col
+              +swatch("base-gray1")
+            .col
+              +swatch("base-gray2")
+            .col
+              +swatch("base-gray3")
+            .col
+              +swatch("base-gray4")
+            .col
+              +swatch("base-gray5")
+          .row
+            .col
+              +swatch("base-lightgray1")
+            .col
+              +swatch("base-lightgray2")
+            .col
+              +swatch("base-lightgray3")
+            .col
+              +swatch("base-lightgray4")
+            .col
+              +swatch("base-lightgray5")
+            .col-md-12
+              h3 Element/State Colors
+          .row
+            .col
+              +swatch("elem-blue1")
+            .col
+              +swatch("elem-blue2")
+            .col
+              +swatch("elem-blue3")
+            .col
+              +swatch("elem-blue4")
+            .col
+              +swatch("elem-blue5")
+          .row
+            .col
+              +swatch("elem-red1")
+            .col
+              +swatch("elem-red2")
+            .col
+              +swatch("elem-red3")
+            .col
+              +swatch("elem-red4")
+            .col
+              +swatch("elem-red5")
+          .row
+            .col
+              +swatch("elem-green1")
+            .col
+              +swatch("elem-green2")
+            .col
+              +swatch("elem-green3")
+            .col
+              +swatch("elem-green4")
+            .col
+              +swatch("elem-green5")
+          .row
+            .col
+              +swatch("elem-orange1")
+            .col
+              +swatch("elem-orange2")
+            .col
+              +swatch("elem-orange3")
+            .col
+              +swatch("elem-orange4")
+            .col
+              +swatch("elem-orange5")
+            .col-md-12
+              h3 Spread Colors
+          .row
+            .col
+              +swatch("spread-sepia")
+            .col
+              +swatch("spread-lime")
+            .col
+              +swatch("spread-turquoise")
+            .col
+              +swatch("spread-indigo")
+            .col
+              +swatch("spread-rose")
+          .row
+            .col
+              +swatch("spread-vermillion")
+            .col
+              +swatch("spread-violet")
+            .col
+              +swatch("spread-cobalt")
+            .col
+              +swatch("spread-forest")
+            .col
+              +swatch("spread-gold")

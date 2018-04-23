@@ -1,0 +1,44 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Components";
+ - var page = "Badges";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Badges', 'Badges are standalone inline-block elements useful for highlighting information, and conveying interface feedback.', 'Component')
+    .row
+      .col-md-12
+        .intro
+            p Badges are a lightweight method of annotating or labeling content. Wrap content in the 
+              code .badge
+              | &nbsp;class to add an inline badge. The font-size and line-height of a badge inherit from that of it’s parent’s properties.
+        .example-component
+          span.badge.badge-default Default
+          | &nbsp;&nbsp;
+          span.badge.badge-primary Primary
+          | &nbsp;&nbsp;
+          span.badge.badge-success Success
+          | &nbsp;&nbsp;
+          span.badge.badge-info Info
+          | &nbsp;&nbsp;
+          span.badge.badge-warning Warning
+          | &nbsp;&nbsp;
+          span.badge.badge-danger Danger
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;span class=&quot;badge badge-default&quot;&gt;Default&lt;/span&gt;
+            |  &lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
+            |  &lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
+            |  &lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
+            |  &lt;span class=&quot;badge badge-warning&quot;&gt;Warning&lt;/span&gt;
+            |  &lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;

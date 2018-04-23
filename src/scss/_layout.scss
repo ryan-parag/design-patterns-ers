@@ -20,9 +20,9 @@
       transition: 150ms ease;
     }
     &--fixed {
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
-      height: 100vh;
+      height: 100%;
     }
   }
   .logo-container {
@@ -38,4 +38,8 @@
 
 html, body {
   font-family: 'Inter UI';
+}
+
+.example-component {
+  margin: 1.5rem 0;
 }

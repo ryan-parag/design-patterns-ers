@@ -7,9 +7,26 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
     // Replace and load from local
     link(href="https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css" rel="stylsheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="../css/system/styles.min.css")
+    link(rel="stylesheet" href="../css/docs/docs.min.css")
+    // Replace and load from local
+    link(href="https://raw.githubusercontent.com/rsms/inter/master/docs/inter-ui.css" rel="stylsheet")
     block head_end
 	
   body.documentation
     block content
 		
     block body_end
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")  
+      script.
+        hljs.initHighlightingOnLoad();
+      script.
+        $(".sidebar__title").click(function() {
+          $(".sidebar").addClass("show");
+          $(".toggle-menu").addClass("active");
+          $(".logo-container").addClass("show");
+          $(".content").addClass("sidebar-open");
+          $(this).parent(".sidebar__item").toggleClass("active");
+        });

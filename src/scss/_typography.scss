@@ -4,3 +4,10 @@
     font-size: 1rem;
   }
 }
+
+pre {
+  border: 1px solid $base-lightgray1;
+  code {
+  font-size: .84rem;
+  }
+}

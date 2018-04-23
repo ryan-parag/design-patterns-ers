@@ -1,0 +1,150 @@
+// Background Colors
+
+.bg {
+  // Base Colors
+  &--base-black {
+   background-color: $base-black; 
+  }
+  &--base-white {
+   background-color: $base-white; 
+  }
+  &--base-darkgray1 {
+   background-color: $base-darkgray1; 
+  }
+  &--base-darkgray2 {
+   background-color: $base-darkgray2; 
+  }
+  &--base-darkgray3 {
+   background-color: $base-darkgray3; 
+  }
+  &--base-darkgray4 {
+   background-color: $base-darkgray4; 
+  }
+  &--base-darkgray5 {
+   background-color: $base-darkgray5; 
+  }
+  &--base-gray1 {
+   background-color: $base-gray1; 
+  }
+  &--base-gray2 {
+   background-color: $base-gray2; 
+  }
+  &--base-gray3 {
+   background-color: $base-gray3; 
+  }
+  &--base-gray4 {
+   background-color: $base-gray4; 
+  }
+  &--base-gray5 {
+   background-color: $base-gray5; 
+  }
+  &--base-lightgray1 {
+   background-color: $base-lightgray1; 
+  }
+  &--base-lightgray2 {
+   background-color: $base-lightgray2; 
+  }
+  &--base-lightgray3 {
+   background-color: $base-lightgray3; 
+  }
+  &--base-lightgray4 {
+   background-color: $base-lightgray4; 
+  }
+  &--base-lightgray5 {
+   background-color: $base-lightgray5; 
+  }
+  
+  // Primary Colors
+  &--elem-red1 {
+   background-color: $elem-red1; 
+  }
+  &--elem-red2 {
+   background-color: $elem-red2; 
+  }
+  &--elem-red3 {
+   background-color: $elem-red3; 
+  }
+  &--elem-red4 {
+   background-color: $elem-red4; 
+  }
+  &--elem-red5 {
+   background-color: $elem-red5; 
+  }
+  &--elem-blue1 {
+   background-color: $elem-blue1; 
+  }
+  &--elem-blue2 {
+   background-color: $elem-blue2; 
+  }
+  &--elem-blue3 {
+   background-color: $elem-blue3; 
+  }
+  &--elem-blue4 {
+   background-color: $elem-blue4; 
+  }
+  &--elem-blue5 {
+   background-color: $elem-blue5; 
+  }
+  &--elem-green1 {
+   background-color: $elem-green1; 
+  }
+  &--elem-green2 {
+   background-color: $elem-green2; 
+  }
+  &--elem-green3 {
+   background-color: $elem-green3; 
+  }
+  &--elem-green4 {
+   background-color: $elem-green4; 
+  }
+  &--elem-green5 {
+   background-color: $elem-green5; 
+  }
+  &--elem-orange1 {
+   background-color: $elem-orange1; 
+  }
+  &--elem-orange2 {
+   background-color: $elem-orange2; 
+  }
+  &--elem-orange3 {
+   background-color: $elem-orange3; 
+  }
+  &--elem-orange4 {
+   background-color: $elem-orange4; 
+  }
+  &--elem-orange5 {
+   background-color: $elem-orange5; 
+  }
+  
+  // Spread Colors
+  &--spread-sepia {
+    background-color: $spread-sepia;
+  }
+  &--spread-lime {
+    background-color: $spread-lime;
+  }
+  &--spread-turquoise {
+    background-color: $spread-turquoise;
+  }
+  &--spread-indigo {
+    background-color: $spread-indigo;
+  }
+  &--spread-rose {
+    background-color: $spread-rose;
+  }
+  &--spread-gold {
+    background-color: $spread-gold;
+  }
+  &--spread-forest {
+    background-color: $spread-forest;
+  }
+  &--spread-cobalt {
+    background-color: $spread-cobalt;
+  }
+  &--spread-violet {
+    background-color: $spread-violet;
+  }
+  &--spread-vermillion {
+    background-color: $spread-vermillion;
+  }
+}

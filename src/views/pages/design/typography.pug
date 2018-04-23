@@ -1,0 +1,72 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Design";
+ - var page = "Typography";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Typography', 'Breadcrumbs are used for showing where the user is inside the application.', 'Design')
+    .row
+      .col-md-12
+        .intro
+            p The ERS design patterns utilize Inter UI as the sole typeface of the interface. It is specially designed for user interfaces with focus on high legibility of small-to-medium sized text on computer screens. As an open source typeface, it is available through its 
+              a(href="https://github.com/rsms/inter/" target="_blank") Github Repository
+              | . More information about this typeface can be found 
+              a(href="http://rsms.me/inter/" target="_blank") here
+              | .
+        .example-component
+          h1 Heading 1
+          h2 Heading 2
+          h3 Heading 3
+          h4 Heading 4
+          h5 Heading 5
+          h6 Heading 6
+      .col-md-12
+        pre
+          code.html
+            |  &lt;h1&gt;Heading 1&lt;/h1&gt;
+            |  &lt;h2&gt;Heading 2&lt;/h2&gt;
+            |  &lt;h3&gt;Heading 3&lt;/h3&gt;
+            |  &lt;h4&gt;Heading 4&lt;/h4&gt;
+            |  &lt;h5&gt;Heading 5&lt;/h5&gt;
+            |  &lt;h6&gt;Heading 6&lt;/h6&gt;
+      .col-md-12
+        .intro
+          p Styling for common inline text elements
+        .example-component
+          p You can use the mark tag to 
+            mark highlight
+            | &nbsp;text.
+          p
+            del This line o text is meant to be treated as deleted text.
+          p
+            s This line of text is meant to be treated as no longer accurate.
+          p
+            ins This line of text is meant to be treated as an addition to the document.
+          p
+            u This line of text will render as underlined.
+          p
+            small This line of text is meant to be treated as fine print.
+          p
+            strong This line rendered as bold text
+          p
+            em This line rendered as italicized text.
+      .col-md-12
+        pre
+          code.html
+            | &lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
+            | &lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+            | &lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
