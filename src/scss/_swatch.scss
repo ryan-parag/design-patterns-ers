@@ -6,6 +6,28 @@
     box-shadow: 0px 3px 6px rgba(black, .1);
     height: 50px;
     margin-bottom: .5rem;
+    position: relative;
+    cursor: pointer;
+    &:hover, &:focus {
+      .swatch__btn {
+        opacity: 1;
+        box-shadow: 0px 3px 6px rgba(black, .12);
+        transition: 250ms ease;
+      }
+    }
+  }
+  &__btn {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    font-family: inherit;
+    background: transparentize($base-black,.5);
+    color: white;
+    border: 1px solid white;
   }
   &__label {
     font-family: monospace;
