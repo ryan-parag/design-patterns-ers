@@ -1,0 +1,17 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Components";
+ - var page = "Grid";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Grid', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
+    .row

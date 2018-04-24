@@ -1,5 +1,5 @@
 mixin swatch(color)
-  .swatch
+  .swatch(onclick="copyVariable('#" + color + "')")
     .swatch__color(class= "bg--" + color)
       button.swatch__btn(type="button") Copy Variable
-    .swatch__label= "$" + color
+    .swatch__label(id= color)= "$" + color

@@ -1,0 +1,269 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Components";
+ - var page = "Card";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Card', 'A card is a flexible and extensible content container.', 'Component')
+    .row
+      .col-md-12
+        .intro
+            h3.mb-3 Examples
+            p Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization.
+            p Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they’ll naturally fill the full width of its parent element.
+        .example-component
+          .card(style="width: 20rem")
+            .card-block
+              h4.card-title Card Title
+              p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+              button.btn.btn-primary(type="button") Button
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;card&quot; style=&quot;width: 20rem;&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |      &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;
+            |      &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |      &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Go somewhere&lt;/a&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+            h3.mb-3 Headers and Footers
+            p Add an optional header and/or footer within a card.
+        .example-component
+          .card
+            .card-header
+              .card-header__text Card Header Title
+            .card-block
+              h4.card-title Card Title
+              p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+              button.btn.btn-primary(type="button") Button
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;card&quot; style=&quot;width: 20rem;&quot;&gt;
+            |    &lt;div class=&quot;card-title&quot;&gt
+            |      &lt;div class=&quot;card-title__text&quot;&gt
+            |       Card Header Title
+            |      &lt;/div&gt;
+            |    &lt;/div&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |      &lt;h4 class=&quot;card-title&quot;&gt;Card title&lt;/h4&gt;
+            |      &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |      &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Go somewhere&lt;/a&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+            h3.mb-3 Sizing
+            p Cards assume no specific 
+              code width
+              | &nbsp;to start, so they’ll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
+            h5 Using grid markup
+            p Using the grid, wrap cards in cloumns and rows as needed.
+        .example-component
+          .row
+            .col-sm-6
+              .card
+                .card-block
+                  h4.card-title Card Title
+                  p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                  button.btn.btn-primary(type="button") Button
+            .col-sm-6
+              .card
+                .card-block
+                  h4.card-title Card Title
+                  p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                  button.btn.btn-primary(type="button") Button
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;row&quot;&gt;
+            |    &lt;div class=&quot;col-sm-6&quot;&gt;
+            |      &lt;div class=&quot;card&quot;&gt;
+            |        &lt;div class=&quot;card-block&quot;&gt;
+            |          &lt;h3 class=&quot;card-title&quot;&gt;Special title treatment&lt;/h3&gt;
+            |          &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |          &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Go somewhere&lt;/a&gt;
+            |        &lt;/div&gt;
+            |      &lt;/div&gt;
+            |    &lt;/div&gt;
+            |    &lt;div class=&quot;col-sm-6&quot;&gt;
+            |      &lt;div class=&quot;card&quot;&gt;
+            |        &lt;div class=&quot;card-block&quot;&gt;
+            |          &lt;h3 class=&quot;card-title&quot;&gt;Special title treatment&lt;/h3&gt;
+            |          &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |          &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Go somewhere&lt;/a&gt;
+            |        &lt;/div&gt;
+            |      &lt;/div&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+            h5 Using utilities
+            p Use our handful of available sizing utilities to quickly set a card's width.
+        .example-component
+          .card.w-75.mb-4
+            .card-block
+              h4.card-title Card Title
+              p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+              button.btn.btn-primary(type="button") Button
+          .card.w-50
+            .card-block
+              h4.card-title Card Title
+              p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+              button.btn.btn-primary(type="button") Button
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;card w-75&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |      &lt;h3 class=&quot;card-title&quot;&gt;Card title&lt;/h3&gt;
+            |      &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |      &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/a&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |
+            |  &lt;div class=&quot;card w-50&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |      &lt;h3 class=&quot;card-title&quot;&gt;Card title&lt;/h3&gt;
+            |      &lt;p class=&quot;card-text&quot;&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+            |      &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Button&lt;/a&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+            h3 Background Variants
+            p Cards include their own variant classes for quickly changing the 
+              code background-color
+              | &nbsp;and 
+              code border-color
+              | &nbsp;of a card. Darker colors require the use of
+              code .card-inverse
+              | &nbsp;to invert text color.
+        .example-component
+          .card-deck
+            .card.mb-4.card-inverse.card-primary
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4.card-inverse.card-success
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4.card-inverse.card-info
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4.card-inverse.card-warning
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4.card-inverse.card-danger
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;card card-inverse card-primary&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;card card-inverse card-success&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;card card-inverse card-info&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;card card-inverse card-warning&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;card card-inverse card-danger&quot;&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |       &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+            h3 Card Decks
+            p Card decks provide useful row layouts for cards. Cards included in a 
+              code card-deck
+              | &nbsp;are given equal width and height.
+        .example-component
+          .card-deck
+            .card.mb-4
+              .card-header
+                .card-header__text Card Header
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4
+              .card-header
+                .card-header__text Card Header
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4
+              .card-header
+                .card-header__text Card Header
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            .card.mb-4
+              .card-header
+                .card-header__text Card Header
+              .card-block
+                p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;card-deck&quot;&gt;
+            |    &lt;div class=&quot;card&quot;&gt;
+            |       &lt;div class=&quot;card-header&quot;&gt;
+            |          &lt;div class=&quot;card-header__text&quot;&gt;Card Header&lt;/div&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class=&quot;card-block&quot;&gt;
+            |          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class=&quot;card&quot;&gt;
+            |       &lt;div class=&quot;card-header&quot;&gt;
+            |          &lt;div class=&quot;card-header__text&quot;&gt;Card Header&lt;/div&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class=&quot;card-block&quot;&gt;
+            |          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class=&quot;card&quot;&gt;
+            |       &lt;div class=&quot;card-header&quot;&gt;
+            |          &lt;div class=&quot;card-header__text&quot;&gt;Card Header&lt;/div&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class=&quot;card-block&quot;&gt;
+            |          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |     &lt;/div&gt;
+            |     &lt;div class=&quot;card&quot;&gt;
+            |       &lt;div class=&quot;card-header&quot;&gt;
+            |          &lt;div class=&quot;card-header__text&quot;&gt;Card Header&lt;/div&gt;
+            |       &lt;/div&gt;
+            |       &lt;div class=&quot;card-block&quot;&gt;
+            |          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+            |       &lt;/div&gt;
+            |     &lt;/div&gt;
+            |   &lt;/div&gt;

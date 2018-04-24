@@ -3,7 +3,7 @@ mixin subNav(selected, menus)
     each menu in menus
       if subSelected === menu.title
         li.sidebar__subitem.active
-          a(href= menu.address)= menu.title
+          span= menu.title
       else
         li.sidebar__subitem
           a(href= menu.address)= menu.title

@@ -1,0 +1,64 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Components";
+ - var page = "Card Nav";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Card Nav', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
+    .row
+      .col-md-12
+        .intro
+            h3.mb-3 Examples
+            p Sometimes
+        .example-component
+          .card.w-50
+            .card-header Card Header
+              ul.card-nav
+                li.card-nav__item
+                  a.card-nav__link(href="#")
+                    svg.sidebar__icon
+                      use(xlink:href="#flag")
+                li.card-nav__item
+                  a.card-nav__link(href="#")
+                    svg.sidebar__icon
+                      use(xlink:href="#folder")
+            .card-block
+              h4.card-title Card Title
+              p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;div class=&quot;card&quot;&gt;
+            |    &lt;div class=&quot;card-header&quot;&gt;Card Header
+            |      &lt;ul class=&quot;card-nav&quot;&gt;
+            |        &lt;li class=&quot;card-nav__item&quot;&gt;
+            |          &lt;a class=&quot;card-nav__link&quot; href=&quot;#&quot;&gt;
+            |            &lt;svg class=&quot;sidebar__icon&quot;&gt;
+            |              &lt;use xlink:href=&quot;#flag&quot;&gt;&lt;/use&gt;
+            |            &lt;/svg&gt;
+            |          &lt;/a&gt;
+            |        &lt;/li&gt;
+            |        &lt;li class=&quot;card-nav__item&quot;&gt;
+            |          &lt;a class=&quot;card-nav__link&quot; href=&quot;#&quot;&gt;
+            |            &lt;svg class=&quot;sidebar__icon&quot;&gt;
+            |              &lt;use xlink:href=&quot;#folder&quot;&gt;&lt;/use&gt;
+            |            &lt;/svg&gt;
+            |          &lt;/a&gt;
+            |        &lt;/li&gt;
+            |      &lt;/ul&gt;
+            |    &lt;/div&gt;
+            |    &lt;div class=&quot;card-block&quot;&gt;
+            |      &lt;h4 class=&quot;card-title&quot;&gt;Card Title&lt;/h4&gt;
+            |      &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;

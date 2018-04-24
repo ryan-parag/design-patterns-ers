@@ -1,0 +1,106 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Components";
+ - var page = "Buttons";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Buttons', 'Buttons express what action will occur when the user clicks or touches it.', 'Component')
+    .row
+      .col-md-12
+        .intro
+            h3.mb-3 Examples
+            p Buttons are used to initialize an action, either in the background or foreground of an experience.
+        .example-component
+          button.btn.btn-primary.mr-2(type="button") Primary
+          button.btn.btn-secondary.mr-2(type="button") Secondary
+          button.btn.btn-success.mr-2(type="button") Success
+          button.btn.btn-info.mr-2(type="button") Info
+          button.btn.btn-warning.mr-2(type="button") Warning
+          button.btn.btn-danger.mr-2(type="button") Danger
+          button.btn.btn-link(type="button") Link
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+            |
+            |  &lt;!-- Secondary, outline button --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+            |
+            |  &lt;!-- Indicates a successful or positive action --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+            |
+            |  &lt;!-- Contextual button for informational alert messages --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+            |
+            |  &lt;!-- Indicates caution should be taken with this action --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+            |
+            |  &lt;!-- Indicates a dangerous or potentially negative action --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+            |
+            |  &lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+      .col-md-12
+        .intro
+            h3.mb-3 Outline Buttons
+            p Replace the default modifier classes with the
+              code .btn-outline-*
+              | &nbsp;ones to remove all background images and colors on any button.
+        .example-component
+          button.btn.btn-outline-primary.mr-2(type="button") Primary
+          button.btn.btn-outline-secondary.mr-2(type="button") Secondary
+          button.btn.btn-outline-success.mr-2(type="button") Success
+          button.btn.btn-outline-info.mr-2(type="button") Info
+          button.btn.btn-outline-warning.mr-2(type="button") Warning
+          button.btn.btn-outline-danger.mr-2(type="button") Danger
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
+            |
+            |  &lt;!-- Secondary, outline button --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
+            |
+            |  &lt;!-- Indicates a successful or positive action --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success&quot;&gt;Success&lt;/button&gt;
+            |
+            |  &lt;!-- Contextual button for informational alert messages --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-info&quot;&gt;Info&lt;/button&gt;
+            |
+            |  &lt;!-- Indicates caution should be taken with this action --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
+            |
+            |  &lt;!-- Indicates a dangerous or potentially negative action --&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
+      .col-md-12
+        .intro
+            h3.mb-3 Sizes
+            p Add 
+              code .btn-lg
+              | &nbsp;or 
+              code .btn-sm
+              | &nbsp;for additional sizes.
+        .example-component
+          button.btn.btn-primary.btn-lg.mr-2(type="button") Large
+          button.btn.btn-primary.mr-2(type="button") Normal
+          button.btn.btn-primary.btn-sm(type="button") Small
+          
+      .col-md-12
+        pre
+          code.html
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large button&lt;/button&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Large button&lt;/button&gt;
+            |  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Large button&lt;/button&gt;

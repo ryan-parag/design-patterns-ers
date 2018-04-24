@@ -1,20 +1,24 @@
 .swatch {
   width: 100%;
   margin-bottom: 1.5rem;
-  &__color {
-    border-radius: 3px;
-    box-shadow: 0px 3px 6px rgba(black, .1);
-    height: 50px;
-    margin-bottom: .5rem;
-    position: relative;
-    cursor: pointer;
-    &:hover, &:focus {
+  border-radius: $border-radius;
+  box-shadow: 0px 3px 6px rgba(black, .1);
+  border: 1px solid $base-lightgray3;
+  cursor: pointer;
+  &:hover, &:focus {
       .swatch__btn {
         opacity: 1;
         box-shadow: 0px 3px 6px rgba(black, .12);
         transition: 250ms ease;
       }
     }
+  &__color {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    height: 50px;
+    margin-bottom: .5rem;
+    position: relative;
+    cursor: pointer;
   }
   &__btn {
     opacity: 0;
@@ -32,5 +36,6 @@
   &__label {
     font-family: monospace;
     font-size: 1rem;
+    padding: 0 .5rem .5rem;
   }
 }
