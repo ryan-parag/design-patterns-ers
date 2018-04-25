@@ -14,13 +14,18 @@ block content
   include ../../mixins/_sectionCard
   .content
     +jumbotron('Overview', 'Consistent design patterns to rapidly prototype interface features for ERS', 'Getting Started')
+    .row
+      .col-md-12
+        .intro
+          h3 What is the purpose of this library?
+          p ERS design patterns provide developers, designers, & engineers a collection of reusable HTML and SCSS partials to build user interfaces. Adopting the library enables developers to use consistent markup, styles, and behavior in prototype and production work.
     .card-area.container
       .row
         .col-lg-6
           +sectionCard("design", 'Design', 'Guidance on usage and application for basic design elements.', '../design/typography.html')
         .col-lg-6
-          +sectionCard("components", 'Components', 'Set of components used across our ERS.', '../components/alerts.html')
+          +sectionCard("components", 'Components', 'A library of components used across ERS.', '../components/alerts.html')
         .col-lg-6
-          +sectionCard("resources", 'Resources', 'Guidance on usage and application for basic design elements.', '#')
+          +sectionCard("resources", 'Resources', 'A helpful list of tools that will improve workflow', '#')
         .col-lg-6
           +sectionCard("templates", 'Templates', 'Guidance on usage and application for basic design elements.', '#')

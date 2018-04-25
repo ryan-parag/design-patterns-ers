@@ -1,0 +1,55 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Resources";
+ - var page = "Dependencies";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Dependencies', 'Consistent design patterns to rapidly prototype interface features for ERS', 'Resources')
+    .row
+      .col-md-12
+        .intro
+          h3 What dependencies do ERS design patterns rely on?
+          p ERS design patterns provide developers, designers, & engineers a collection of reusable HTML and SCSS partials to build user interfaces. Adopting the library enables developers to use consistent markup, styles, and behavior in prototype and production work.
+    .card-area.container
+      .row
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4
+        .col-3
+          a.card(href="#").text-center
+            img.card-img-top.mx-auto.my-3(src="../assets/ers-docs--design.png")
+            .card-block Bootstrap 4

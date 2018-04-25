@@ -12,5 +12,13 @@ mixin jumbotron(title, subtitle, type)
       svg.jumbotron__icon.text-danger
           use(xlink:href="#stack")
       span.badge.badge-danger.jumbotron__badge Component
+    if type === "Resource"
+      svg.jumbotron__icon.text-warning
+          use(xlink:href="#folder")
+      span.badge.badge-warning.jumbotron__badge Resource
+    if type === "Template"
+      svg.jumbotron__icon.text-info
+          use(xlink:href="#docs")
+      span.badge.badge-info.jumbotron__badge Template
     h1.jumbotron__title= title
     p.jumbotron__subtitle.text-muted= subtitle

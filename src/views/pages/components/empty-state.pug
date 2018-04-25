@@ -15,3 +15,70 @@ block content
   .content
     +jumbotron('Empty State', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
     .row
+      .col-md-12
+        .intro
+          h3.mb-3 Examples
+        .example-component
+          .empty-state
+            .empty-state__title No Matching Search Results
+            .empty-state__desc Try again using a different search term or return to the dashboard
+            .empty-state__cta
+              button.btn.btn-primary(type="button") Go to Dashboard
+      .col-md-12
+        pre
+          code.html
+            | &lt;div class=&quot;empty-state&quot;&gt;
+            |    &lt;div class=&quot;empty-state__title&quot;&gt;No Matching Search Results&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__desc&quot;&gt;Try again using a different search term or return to the dashboard&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__cta&quot;&gt;
+            |      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Go to Dashboard&lt;/button&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+          h3.mb-3 Modifiers
+          p Add modifier classes with the
+              code .empty-state--*
+              | &nbsp;ones to change the icon to one that is predefined for a different empty state.
+        .example-component.d-flex.flex-wrap.justify-content-around
+          .empty-state.empty-state--user
+            .empty-state__title No User Found
+            .empty-state__desc Try again using a more generic search
+            .empty-state__cta
+              button.btn.btn-primary(type="button") Go to Dashboard
+          .empty-state.empty-state--data
+            .empty-state__title No Data Available
+            .empty-state__desc There is no data available at the moment
+            .empty-state__cta
+              button.btn.btn-primary(type="button") Go to Dashboard
+          .empty-state.empty-state-reload
+            .empty-state__title Reload Page
+            .empty-state__desc An error might have occured.
+            .empty-state__cta
+              button.btn.btn-primary(type="button") Reload Page
+      .col-md-12
+        pre
+          code.html
+            | &lt;div class=&quot;empty-state empty-state--user&quot;&gt;
+            |    &lt;div class=&quot;empty-state__title&quot;&gt;No User Found&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__desc&quot;&gt;Try again using a more generic search&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__cta&quot;&gt;
+            |      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Go to Dashboard&lt;/button&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |
+            | &lt;div class=&quot;empty-state empty-state--data&quot;&gt;
+            |    &lt;div class=&quot;empty-state__title&quot;&gt;No Data Available&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__desc&quot;&gt;There is no data available at the moment&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__cta&quot;&gt;
+            |      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Go to Dashboard&lt;/button&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |
+            | &lt;div class=&quot;empty-state empty-state--reload&quot;&gt;
+            |    &lt;div class=&quot;empty-state__title&quot;&gt;Reload Page&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__desc&quot;&gt;An error might have occured.&lt;/div&gt;
+            |    &lt;div class=&quot;empty-state__cta&quot;&gt;
+            |      &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Reload Page&lt;/button&gt;
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;

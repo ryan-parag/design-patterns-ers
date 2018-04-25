@@ -15,3 +15,43 @@ block content
   .content
     +jumbotron('Containers', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
     .row
+      .col-md-12
+        .intro
+          h3.mb-3 Grid Containers
+          p Containers area the most basic layout element and are required when using the grid patterns in ERS. Choose from a fixed width container or fluid-width:
+        .example-component.card-area
+          .container.grid-example.mb-3 Container
+          .container-fluid.grid-example.mb-3 Container-Fluid
+        .col-md-12
+        pre
+          code.html
+            |   &lt;div class=&quot;container&quot;&gt;
+            |     Container <!--content here-->
+            |   &lt;/div&gt;
+            |
+            |   &lt;div class=&quot;container-fluid&quot;&gt;
+            |     Container-fluid <!--content here-->
+            |   &lt;/div&gt;
+        .col-md-12
+          .intro
+            h3.mb-3 Content Layout Areas
+            p
+        .col-md-12
+          .example-component
+            .card-area
+              header.header Header
+              .main-content(style="min-height: 500px")
+               aside.sidebar Sidebar
+               .content
+                .container-fluid
+                  | Main Content Area
+      .col-md-12
+        pre
+          code.html
+            | &lt;header class=&quot;header&quot;&gt;Header&lt;/header&gt;
+            |    &lt;div class=&quot;main-content&quot;&gt;
+            |      &lt;aside class=&quot;sidebar&quot;&gt;Sidebar&lt;/aside&gt;
+            |      &lt;div class=&quot;content&quot;&gt;
+            |        &lt;div class=&quot;container-fluid&quot;&gt;Main Content Area&lt;/div&gt;
+            |      &lt;/div&gt;
+            |    &lt;/div&gt;

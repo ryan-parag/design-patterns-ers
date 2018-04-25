@@ -15,3 +15,103 @@ block content
   .content
     +jumbotron('Sidebar', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
     .row
+      .col-md-12
+        .intro
+          h3.mb-3
+          p
+        .example-component
+          .card-area
+            aside.sidebar.show
+              ul.sidebar__menu
+               li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Sidebar Item 1")
+                .sidebar__title
+                 svg.sidebar__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor")
+                  path(d="M15 5h2V3a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2h8z")
+                  path(d="M19 3v4H5V3a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-2 16H7v-2h10zm0-4H7v-2h10zm0-4H7V9h10z")
+                 .sidebar__label Sidebar Item 1
+                ul.sidebar__submenu
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 1
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 2
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 3
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 4
+               li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Sidebar Item 2")
+                .sidebar__title
+                 svg.sidebar__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor")
+                  path(d="M2 2h10v2h2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2v-2H2zm20 8H12a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V12a2 2 0 0 0-2-2zm-6 10.41l-2.71-2.71 1.41-1.41 1.3 1.3 3.79-3.79 1.41 1.41z")
+                  path(d="M7 7h10v2h2V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2v-2H7z")
+                 .sidebar__label Sidebar Item 2
+                ul.sidebar__submenu
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 1
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 2
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 3
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 4
+               li.sidebar__item(data-toggle="tooltip" data-placement="top" title="Sidebar Item 3")
+                .sidebar__title
+                 svg.sidebar__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor")
+                  path(d="M22 2h-9V0h-2v2H2a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9.67L7.4 22.2l1.2 1.6 3.4-2.55 3.4 2.55 1.2-1.6-4.27-3.2H22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-2.64 8.47l-.85-1.23-5.78 4-2.91-2-5.25 3.58-1.14-1.64 6.39-4.39 2.91 2 4.65-3.2-.85-1.23 5-.39z")
+                 .sidebar__label Sidebar Item 3
+                ul.sidebar__submenu
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 1
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 2
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 3
+                 li.sidebar__subitem
+                  a(href="#") Sub-item 4
+      .col-md-12
+        pre
+          code.html
+            |  &lt;aside class=&quot;sidebar&quot;&gt;
+            |    &lt;ul class=&quot;sidebar__menu&quot;&gt;
+            |      &lt;li class=&quot;sidebar__item&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Sidebar Item 1&quot;&gt;
+            |        &lt;div class=&quot;sidebar__title&quot;&gt;
+            |          &lt;svg class=&quot;sidebar__icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;&gt;
+            |            &lt;use xlink:href=&quot;#icon&quot;&gt;
+            |          &lt;/svg&gt;
+            |          &lt;div class=&quot;sidebar__label&quot;&gt;Sidebar Item 1&lt;/div&gt;
+            |        &lt;/div&gt;
+            |        &lt;ul class=&quot;sidebar__submenu&quot;&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 1&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 2&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 3&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 4&lt;/a&gt;&lt;/li&gt;
+            |        &lt;/ul&gt;
+            |      &lt;/li&gt;
+            |      &lt;li class=&quot;sidebar__item&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Sidebar Item 2&quot;&gt;
+            |        &lt;div class=&quot;sidebar__title&quot;&gt;
+            |          &lt;svg class=&quot;sidebar__icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;&gt;
+            |            &lt;use xlink:href=&quot;#icon&quot;&gt;
+            |          &lt;/svg&gt;
+            |          &lt;div class=&quot;sidebar__label&quot;&gt;Sidebar Item 2&lt;/div&gt;
+            |        &lt;/div&gt;
+            |        &lt;ul class=&quot;sidebar__submenu&quot;&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 1&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 2&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 3&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 4&lt;/a&gt;&lt;/li&gt;
+            |        &lt;/ul&gt;
+            |      &lt;/li&gt;
+            |      &lt;li class=&quot;sidebar__item&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Sidebar Item 3&quot;&gt;
+            |        &lt;div class=&quot;sidebar__title&quot;&gt;
+            |          &lt;svg class=&quot;sidebar__icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot;&gt;
+            |            &lt;use xlink:href=&quot;#icon&quot;&gt;
+            |          &lt;/svg&gt;
+            |          &lt;div class=&quot;sidebar__label&quot;&gt;Sidebar Item 3&lt;/div&gt;
+            |        &lt;/div&gt;
+            |        &lt;ul class=&quot;sidebar__submenu&quot;&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 1&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 2&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 3&lt;/a&gt;&lt;/li&gt;
+            |          &lt;li class=&quot;sidebar__subitem&quot;&gt;&lt;a href=&quot;#&quot;&gt;Sub-Item 4&lt;/a&gt;&lt;/li&gt;
+            |        &lt;/ul&gt;
+            |    &lt;/ul&gt;
+            |  &lt;/aside&gt;

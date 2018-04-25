@@ -13,5 +13,110 @@ block content
   include ../../mixins/_jumbotron
   include ../../mixins/_sectionCard
   .content
-    +jumbotron('Grid', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
+    +jumbotron('Grid', 'A multi-tier grid system based on a 12-column layout.', 'Component')
     .row
+      .col-md-12
+        .intro
+          h3.mb-3 Using the grid system
+          p Grid systems are used for creating page layouts through a series of rows and columns that house your content.
+          h5.mb-3 How it Works
+          p The grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+        .example-component.card-area
+          .row
+            .col.grid-example
+              | One of three columns
+            .col.grid-example
+              | One of three columns
+            .col.grid-example
+              | One of three columns
+        .intro
+          p The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parents 
+            code .container
+            | &nbsp;for a fixed
+            code max-width
+            | , or 
+            code .container-fluid
+            | for a fluid, 100% width container.
+          ul
+            li Containers provide a means to center your site’s contents. Use 
+              code .container
+              | &nbsp;for fixed width or 
+              code .container-fluid
+              | &nbsp;for full width.
+            li Rows are horizontal groups of columns that ensure your columns are lined up properly. The grid component uses the negative margin method on 
+              code .row
+              | &nbsp;to ensure all content is aligned properly down the left side.
+            li Content should be placed within columns, and only columns may be immediate children of rows.
+            li Thanks to flexbox, grid columns without a set width will automatically layout with equal widths. For example, four instances of 
+              code .col-sm
+              | &nbsp;will each automatically be 25% wide for small breakpoints.
+            li Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns, you can use 
+              code .col-sm-4
+              | .
+            li Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns, you can use 
+              code .col-sm-4
+              | .
+            li Column 
+              code widths
+              | &nbsp;are set in percentages, so they’re always fluid and sized relative to their parent element.
+            li Columns have horizontal 
+              code padding
+              | &nbsp;to create the gutters between individual columns.
+            li There are five grid tiers, one for each responsive breakpoint: all breakpoints (extra small), small, medium, large, and extra large.
+        .intro
+          h3.mb-3.mt-3 Auto-layout columns
+          p Utilize breakpoint-specific column classes for equal-width columns. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+          h5.mb-3 Equal-width
+        .example-component.card-area
+          .row
+            .col.grid-example 1 of 2
+            .col.grid-example 1 of 2
+          .row
+            .col.grid-example 1 of 3
+            .col.grid-example 1 of 3
+            .col.grid-example 1 of 3
+      .col-md-12
+        pre
+          code.html
+            | &lt;div class=&quot;row&quot;&gt;
+            |    &lt;div class=&quot;col&quot;&gt;
+            |      1 of 2
+            |    &lt;/div&gt;
+            |    &lt;div class=&quot;col&quot;&gt;
+            |      1 of 2
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+            |  &lt;div class=&quot;row&quot;&gt;
+            |    &lt;div class=&quot;col&quot;&gt;
+            |      1 of 3
+            |    &lt;/div&gt;
+            |    &lt;div class=&quot;col&quot;&gt;
+            |      1 of 3
+            |    &lt;/div&gt;
+            |    &lt;div class=&quot;col&quot;&gt;
+            |      1 of 3
+            |    &lt;/div&gt;
+            |  &lt;/div&gt;
+      .col-md-12
+        .intro
+          h3.mb-3 Content Layout Areas
+          p
+      .col-md-12
+        .example-component
+          .card-area
+            header.header Header
+            .main-content(style="min-height: 500px")
+             aside.sidebar Sidebar
+             .content
+              .container-fluid
+                | Main Content Area
+      .col-md-12
+        pre
+          code.html
+            | &lt;header class=&quot;header&quot;&gt;Header&lt;/header&gt;
+            |    &lt;div class=&quot;main-content&quot;&gt;
+            |      &lt;aside class=&quot;sidebar&quot;&gt;Sidebar&lt;/aside&gt;
+            |      &lt;div class=&quot;content&quot;&gt;
+            |        &lt;div class=&quot;container-fluid&quot;&gt;Main Content Area&lt;/div&gt;
+            |      &lt;/div&gt;
+            |    &lt;/div&gt;

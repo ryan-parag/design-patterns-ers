@@ -15,3 +15,34 @@ block content
   .content
     +jumbotron('Profile', 'A succinct, organized way to navigate and embed actions in a card component.', 'Component')
     .row
+      .col-md-12
+        .intro
+          h3.mb-3
+          p
+        .example-component.card-area.d-flex.justify-content-center
+          .card(style="max-width:200px")
+            .card-block
+              .profile.dropdown.show
+                a(href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").profile__button.dropdown-toggle
+                 svg.profile__icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                  circle(cx="12" cy="12" r="12" fill="currentColor")
+                  circle(cx="12" cy="7.91" r="3.72" style="fill:#fff")
+                  path(d="M12,13.12a6.69,6.69,0,0,0-6.7,6.69H18.7A6.69,6.69,0,0,0,12,13.12Z" style="fill:#fff")
+                 span.profile__name k.raikkonen
+      .col-md-12
+        pre
+          code.html
+            | &lt;div class=&quot;profile dropdown show&quot;&gt;
+            |    &lt;a class=&quot;profile__button dropdown-toggle&quot; href=&quot;#&quot; id=&quot;dropdownMenuLink&quot; data-toggle=&quot;dropdown&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;
+            |      &lt;svg class=&quot;profile__icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+            |        &lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;12&quot; fill=&quot;currentColor&quot;&gt;&lt;/circle&gt;
+            |        &lt;circle cx=&quot;12&quot; cy=&quot;7.91&quot; r=&quot;3.72&quot; style=&quot;fill:#fff;&quot;&gt;&lt;/circle&gt;
+            |        &lt;path d=&quot;M12,13.12a6.69,6.69,0,0,0-6.7,6.69H18.7A6.69,6.69,0,0,0,12,13.12Z&quot; style=&quot;fill:#fff;&quot;&gt;&lt;/path&gt;
+            |      &lt;/svg&gt;
+            |      &lt;span class=&quot;profile__name&quot;&gt;k.raikkonen&lt;/span&gt;
+            |    &lt;/a&gt;
+            |    &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink&quot;&gt;
+            |      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;My Account&lt;/a&gt;
+            |      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Sign Out&lt;/a&gt;
+            |    &lt;/div&gt;
+            |    &lt;/div&gt;

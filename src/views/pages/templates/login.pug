@@ -1,0 +1,24 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Templates";
+ - var page = "Login";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Login', 'Consistent design patterns to rapidly prototype interface features for ERS', 'Template')
+    .row
+      .col-md-12
+        .intro
+        .example-component
+          p(data-height="600" data-theme-id="dark" data-slug-hash="Eoxdeo" data-default-tab="result" data-user="ryanparag" data-embed-version="2" data-pen-title="ERS Login" class="codepen") See the Pen
+            a(href="https://codepen.io/ryanparag/pen/Eoxdeo/") ERS Login
+            | &nbsp;by Ryan (<a href="https://codepen.io/ryanparag">@ryanparag</a>)
+          script(async src="https://static.codepen.io/assets/embed/ei.js")

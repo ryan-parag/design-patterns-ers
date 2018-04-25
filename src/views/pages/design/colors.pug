@@ -20,11 +20,14 @@ block content
         .intro
             p A neutral palette along with a full color palette offer a wide array of color options for the interface.
               code $elem-blue3
-              | &nbsp;is used across the design patterns as the primary color. You can see this carry across forms, buttons, and other components.
+              | &nbsp;is used across the design patterns as the primary color. You can see this carry across forms, buttons, and other components. To avoid errors in the build process and to build for greater consistency, we should build our interfaces using predefined color variables and 
+              span.text-danger avoid color-picking a 'near-to-close' value for every instance of that color.
         .example-component
           .row
             .col-md-12
-              h3.mb-3 Base UI Colors
+              .intro
+                h3.mb-3 Base UI Colors
+                p Black, white and everything in between. The base UI should be used for the main UI frame: containers, headers, sections, boxes, etc. If you need to call attention to a particular element (buttons, icons, tooltips, etc.), use one of the element colors.
           .row
             .col
               +swatch("base-black")
@@ -64,8 +67,14 @@ block content
             .col
               +swatch("base-lightgray5")
             .col-md-12
-              h3.mb-3 Element/State Colors
-          .row
+              .intro
+                h3.mb-3 Element/State Colors
+                p Element colors are reserved for user interface design. Use these to help call attention to specific UI elements, such as buttons, callouts, icons, etc. The element colors adhere to WCAG 2.0 standards, and therefore are highly accessible to visually impaired and color blind users. Each element color is mapped to what we call a visual intent. We use intents to convey the status of UI elements:
+                  ul
+                    li Blue (intent: primary) elevates elements from the typical gray scale UI frame.
+                    li Green (intent: success) indicates successful operations.
+                    li Orange (intent: warning) indicates warnings and intermediate states.
+                    li Red (intent: danger) indicates errors and potentially destructive operations.
             .col
               +swatch("elem-blue1")
             .col
@@ -110,8 +119,10 @@ block content
             .col
               +swatch("elem-orange5")
             .col-md-12
-              h3.mb-3 Spread Colors
-          .row
+              .intro
+                h3.mb-3 Spread Colors
+                p Spread colors should typically be reserved for data visualizations: any time you need to represent data of some sort(eg. charts), you can use these. These colors are less strict on WCAG 2.0 accessibility standards and should therefore not be used for typical user interface design — take a look at element colors instead.
+            .row
             .col
               +swatch("spread-sepia")
             .col
