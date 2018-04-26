@@ -1,0 +1,97 @@
+extends ../../layouts/_main
+
+block vars
+ - var spacer = " | ";
+ - var section = "Getting Started";
+ - var page = "Things to Know";
+block head_end
+
+block content
+ include ../../partials/_icons
+ .main-content
+  include ../../partials/_sidebar2
+  include ../../mixins/_jumbotron
+  include ../../mixins/_sectionCard
+  .content
+    +jumbotron('Things to Know', 'Consistent design patterns to rapidly prototype interface features for ERS', 'Getting Started')
+    .row
+      .col-md-12
+        .intro
+          h3 What is the purpose of this library?
+          p ERS design patterns provide developers, designers, & engineers a collection of reusable HTML and SCSS partials to build user interfaces. Adopting the library enables developers to use consistent markup, styles, and behavior in prototype and production work.
+    .card-area.container
+      .row
+        .col-md-12
+          .card
+            .card-block
+              .media
+                img.mr-3(src=src="../assets/ers-icon-sass.svg")
+                .media-body.intro
+                  h5.mt-0 SASS/SCSS
+                  | Using the Sass files within the ERS design patterns infers usage of the SCSS pre-processor. All Sass files use the 
+                  code *.scss 
+                  | &nbsp;file extension.
+                  ul.mt-4
+                    p.text-primary
+                      strong Design Standards 
+                    li.mb-4
+                      strong Autoprefixer: 
+                      | Make sure your build process uses autoprefixer to ensure vendor prefixes are automatically added to your output CSS.
+                    li.mb-4
+                      strong Importing SCSS files: 
+                      | To add a component style to your build, simply import the component directly.
+                      pre.mb-4
+                        code.css
+                          | @import 'node_modules/carbon-components/scss/components/card/card';
+                      p Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
+                    li
+                      strong New to SASS/SCSS? 
+                      a(href="#") Learn to use SASS/SCSS and read the documentation to get started!
+        .col-md-12
+          .card
+            .card-block
+              .media
+                img.mr-3(src=src="../assets/ers-icon-gulp.svg")
+                .media-body.intro
+                  h5.mt-0 Gulp
+                  | Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow
+                  ul.mt-4
+                    p.text-primary
+                      strong Design Standards 
+                    li.mb-4
+                      strong Autoprefixer: 
+                      | Make sure your build process uses autoprefixer to ensure vendor prefixes are automatically added to your output CSS.
+                    li.mb-4
+                      strong Importing SCSS files: 
+                      | To add a component style to your build, simply import the component directly.
+                      pre.mb-4
+                        code.css
+                          | @import 'node_modules/carbon-components/scss/components/card/card';
+                      p Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
+                    li
+                      strong New to SASS/SCSS? 
+                      a(href="#") Learn to use SASS/SCSS and read the documentation to get started!
+        .col-md-12
+          .card
+            .card-block
+              .media
+                img.mr-3(src=src="../assets/ers-icon-webpack.svg")
+                .media-body.intro
+                  h5.mt-0 Webpack
+                  | Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow
+                  ul.mt-4
+                    p.text-primary
+                      strong Design Standards 
+                    li.mb-4
+                      strong Autoprefixer: 
+                      | Make sure your build process uses autoprefixer to ensure vendor prefixes are automatically added to your output CSS.
+                    li.mb-4
+                      strong Importing SCSS files: 
+                      | To add a component style to your build, simply import the component directly.
+                      pre.mb-4
+                        code.css
+                          | @import 'node_modules/carbon-components/scss/components/card/card';
+                      p Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
+                    li
+                      strong New to SASS/SCSS? 
+                      a(href="#") Learn to use SASS/SCSS and read the documentation to get started!
